@@ -1,0 +1,19 @@
+.CodeMirror .cm-spell-error:not(.cm-url):not(.cm-comment):not(.cm-tag):not(.cm-word).cm-null
+  background: none
+  display: inline-block
+  position: relative
+  &::after
+    content: ''
+    width: 100%
+    height: 2px
+    transform: translateY(-100%)
+    position: absolute
+    background: #ec0000
+    display: block
+    opacity: 0.6
+
+@keyframes grow
+  0%
+    width: 0%
+  100%
+    width: 100%

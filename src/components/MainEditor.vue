@@ -11,6 +11,7 @@ export default comp
 
 <style lang="sass">
 @import '~simplemde/dist/simplemde.min.css'
+@import '../assets/styles/codemirror.sass'
 
 .editor_wrap
   position: absolute
