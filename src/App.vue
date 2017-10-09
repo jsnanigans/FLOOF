@@ -1,28 +1,17 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello-world/>
+  <div class="app">
+    <main-editor/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import MainEditor from './components/MainEditor'
+require('@/assets/styles/main.sass')
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MainEditor
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

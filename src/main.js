@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import App from './App'
+import VueSimplemde from 'vue-simplemde'
+
+Vue.use(VueSimplemde)
 
 Vue.config.productionTip = false
 
