@@ -1,29 +1,69 @@
 @import '~simplemde-theme-base/dist/simplemde-theme-base.min.css'
 
+$e_l: 300px
+
+$tb_bg: transparent
+$tb_c: #fff
+$tb_fs: 14px
+
 .editor_wrap
   position: absolute
-  left: 120px
-  top: 40px
-  right: 40px
-  bottom: 40px
+  left: $e_l
+  top: 0
+  right: 0
+  bottom: 0
 
   .markdown-editor
     height: 100%
     
   .CodeMirror
-    height: calc(100% - 113px)
+    height: calc(100% - 81px)
     min-height: 0
     box-sizing: border-box
+    padding: 0
+    border-radius: 10px 0 0 10px
+    border: 0
+    cursor: text
+
+    &-scroll
+      // padding: 10px 15px
+      // height: calc(100% - 10px)
+    
+    &-sizer
+      padding: 10px 15px
+
+
+    // code style fix
+    &-code
+      .cm
+        &-strikethrough
+          &.cm-formatting
+            text-decoration: none
 
     // &-sided
       // width: 50% !important
   
+  .editor-toolbar
+    border-radius: 0
+    border: 0
+    background: $tb_bg
+    margin-left: 10px
+    a
+      &::before,
+        color: $tb_c
+        font-size: $tb_fs
+      &::after
+        color: $tb_c
+        opacity: 0.7
+
   .editor-statusbar
     color: white
   
   .editor-preview-side
-    top: 50px
+    top: 49px
     right: 0
-    bottom: 63px
+    bottom: 31px
     width: 50%
     position: absolute
+    border: 0
+    background: #eee
