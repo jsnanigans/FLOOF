@@ -23,7 +23,10 @@ export default comp
   //   left: 100%
   //   height: 100%
 
+  .markdown-editor
+    height: 100%
+    
   .CodeMirror
-    height: calc(100vh - 103px)
+    height: calc(100vh - 113px)
     min-height: 0
 </style>
