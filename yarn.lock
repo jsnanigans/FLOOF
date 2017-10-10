@@ -1289,7 +1289,7 @@ codemirror-spell-checker@*:
   dependencies:
     typo-js "*"
 
-codemirror@*:
+codemirror@*, codemirror@^5.22.0:
   version "5.30.0"
   resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.30.0.tgz#86e57dd5ea5535acbcf9c720797b4cefe05b5a70"
 
@@ -5361,6 +5361,12 @@ shelljs@^0.7.5, shelljs@^0.7.6:
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+simplemde-theme-base@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/simplemde-theme-base/-/simplemde-theme-base-0.2.1.tgz#f6e35d8d005b4b89bee31ec21af7d5262c718847"
+  dependencies:
+    codemirror "^5.22.0"
 
 simplemde@^1.11.2:
   version "1.11.2"

@@ -1,6 +1,6 @@
 <template>
   <div class="editor_wrap">
-    <markdown-editor v-model="content" ref="markdownEditor"></markdown-editor>
+    <editor v-model="content" :configs="configs" ref="markdownEditor"></editor>
   </div>
 </template>
 
@@ -10,7 +10,6 @@ export default comp
 </script>
 
 <style lang="sass">
-@import '~simplemde/dist/simplemde.min.css'
 @import '../assets/styles/codemirror.sass'
 
 .editor_wrap
