@@ -1,7 +1,17 @@
 <template>
-  <div class="editor_wrap">
-    <div class="markdown-editor">
-      <codemirror v-model="code" :options="editorOptions"></codemirror>
+  <div>
+    <select name="theme" id="" v-model="activeTheme">
+      <option v-for="theme in themes" :key="theme + '_'" :value="theme">{{theme}}</option>
+    </select>
+
+    <div class="editor_wrap">
+      <div class="markdown-editor">
+        <codemirror v-model="code" :options="editorOptions"
+          @ready="onEditorReady"
+          @focus="onEditorFocus"
+          @change="onEditorCodeChange"
+        ></codemirror>
+      </div>
     </div>
   </div>
 </template>
