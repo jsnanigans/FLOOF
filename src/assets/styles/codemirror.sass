@@ -1,4 +1,4 @@
-@import '~simplemde-theme-base/dist/simplemde-theme-base.min.css'
+@import '~codemirror/lib/codemirror.css'
 
 $e_l: 300px
 
@@ -17,7 +17,9 @@ $tb_fs: 14px
     height: 100%
     
   .CodeMirror
-    height: calc(100% - 81px)
+    height: calc(100% - 110px)
+    box-shadow: 0 0 60px rgba(0,0,0,.4)
+    top: 80px
     min-height: 0
     box-sizing: border-box
     padding: 0
@@ -30,7 +32,8 @@ $tb_fs: 14px
       // height: calc(100% - 10px)
     
     &-sizer
-      padding: 10px 15px
+      padding: 20px 25px
+      padding-bottom: 10px !important
 
 
     // code style fix

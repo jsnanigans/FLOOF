@@ -1289,7 +1289,7 @@ codemirror-spell-checker@*:
   dependencies:
     typo-js "*"
 
-codemirror@*, codemirror@^5.22.0:
+codemirror@*, codemirror@^5.22.0, codemirror@^5.30.0:
   version "5.30.0"
   resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.30.0.tgz#86e57dd5ea5535acbcf9c720797b4cefe05b5a70"
 
@@ -5981,6 +5981,12 @@ vm-browserify@0.0.4:
 void-elements@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
+
+vue-codemirror@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/vue-codemirror/-/vue-codemirror-3.1.6.tgz#3993e05dd0ec6cd6e2d759127d5ce7955841c134"
+  dependencies:
+    codemirror "^5.30.0"
 
 vue-hot-reload-api@^2.1.0:
   version "2.1.1"

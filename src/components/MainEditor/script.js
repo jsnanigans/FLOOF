@@ -1,35 +1,24 @@
-import editor from '../Editor'
+import { codemirror } from 'vue-codemirror'
+require('codemirror/mode/gfm/gfm.js')
+require('./modes')
 
 export default {
   name: 'MainEditor',
-  components: {
-    editor
-  },
   data () {
     return {
-      content: 'qweqwe',
-      theme: '',
-      configs: {
-        spellChecker: false,
-        autofocus: true,
-        toolbar: [
-          'bold', 'italic', 'strikethrough', '|',
-          'horizontal-rule', '|',
-          // 'heading',
-          'heading-smaller', 'heading-bigger', '|',
-          'code', 'quote', '|',
-          'unordered-list', 'ordered-list', '|',
-          // 'clean-block'
-          'link', 'image', 'table', '|',
-          'preview', 'side-by-side'
-          // 'fullscreen'
-          // '|',
-          // 'guide'
-        ]
+      code: 'asd',
+      loadedLangs: [],
+      editorOptions: {
+        mode: 'gfm',
+        lineNumbers: false
       }
     }
   },
-
   mounted () {
+  },
+  watch: {
+  },
+  components: {
+    codemirror
   }
 }

@@ -1,6 +1,8 @@
 <template>
   <div class="editor_wrap">
-    <editor v-model="content" :configs="configs" ref="markdownEditor"></editor>
+    <div class="markdown-editor">
+      <codemirror v-model="code" :options="editorOptions"></codemirror>
+    </div>
   </div>
 </template>
 

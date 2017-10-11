@@ -17,6 +17,7 @@
     "sass-loader": "^6.0.6",
     "simplemde-theme-base": "^0.2.1",
     "vue": "^2.4.2",
+    "vue-codemirror": "^3.1.6",
     "vue-simplemde": "^0.4.4"
   },
   "devDependencies": {

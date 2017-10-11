@@ -1,23 +1,50 @@
 <template>
   <div class="markdown-editor">
-    <textarea></textarea>
+    <textarea ref="code">
+      GitHub Flavored Markdown
+========================
+
+Everything from markdown plus GFM features:
+
+## URL autolinking
+
+Underscores_are_allowed_between_words.
+
+## Strikethrough text
+
+GFM adds syntax to strikethrough text, which is missing from standard Markdown.
+
+~~Mistaken text.~~
+~~**works with other formatting**~~
+
+~~spans across
+lines~~
+
+## Fenced code blocks (and syntax highlighting)
+
+```javascript
+for (var i = 0; i &lt; items.length; i++) {
+    console.log(items[i], i); // log them
+}
+```
+
+## Task Lists
+
+- [ ] Incomplete task list item
+- [x] **Completed** task list item
+
+    </textarea>
   </div>
 </template>
 
 <script>
-import SimpleMDE from '../assets/simplemde'
+// import SimpleMDE from '../assets/simplemde'
+import CodeMirror from 'codemirror'
 
 export default {
   name: 'markdown-editor',
   props: {
     value: String,
-    previewClass: String,
-    autoinit: {
-      type: Boolean,
-      default () {
-        return true
-      }
-    },
     highlight: {
       type: Boolean,
       default () {
@@ -31,56 +58,24 @@ export default {
       }
     }
   },
-  mounted () {
-    if (this.autoinit) this.initialize()
-  },
-  activated () {
-    const editor = this.simplemde
-    if (!editor) return
-    const isActive = editor.isSideBySideActive() || editor.isPreviewActive()
-    if (isActive) editor.toggleFullScreen()
-  },
   methods: {
-    initialize () {
-      const configs = {
-        element: this.$el.firstElementChild,
-        initialValue: this.value,
-        renderingConfig: {}
-      }
-      Object.assign(configs, this.configs)
-
-      if (this.highlight) {
-        configs.renderingConfig.codeSyntaxHighlighting = true
-      }
-
-      this.simplemde = new SimpleMDE(configs)
-
-      const className = this.previewClass || ''
-      this.addPreviewClass(className)
-
-      this.bindingEvents()
-    },
-    bindingEvents () {
-      this.simplemde.codemirror.on('change', () => {
-        this.$emit('input', this.simplemde.value())
-      })
-    },
-    addPreviewClass (className) {
-      const wrapper = this.simplemde.codemirror.getWrapperElement()
-      const preview = document.createElement('div')
-      wrapper.nextSibling.className += ` ${className}`
-      preview.className = `editor-preview ${className}`
-      wrapper.appendChild(preview)
-    }
+  },
+  mounted () {
+    this.$editor = CodeMirror.fromTextArea(this.$refs.code, {
+      mode: {
+        name: 'gfm',
+        tokenTypeOverrides: {
+          emoji: 'emoji'
+        }
+      },
+      lineNumbers: true,
+      theme: 'default'
+    })
   },
   destroyed () {
-    this.simplemde = null
   },
   watch: {
-    value (val) {
-      if (val === this.simplemde.value()) return
-      this.simplemde.value(val)
-    }
+
   }
 }
 </script>
