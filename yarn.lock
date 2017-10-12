@@ -6010,6 +6010,10 @@ vue-loader@^13.0.4:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.5.3"
 
+vue-material-design-icons@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/vue-material-design-icons/-/vue-material-design-icons-0.7.1.tgz#3cbe06a1ec93ac3d333160c28a45dbb52ef98364"
+
 vue-simplemde@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/vue-simplemde/-/vue-simplemde-0.4.4.tgz#88ab9ceeb9bf1c2ffd8e02978b9d06468aa149d7"

@@ -6,6 +6,9 @@
 
     <div class="editor_wrap">
       <div class="markdown-editor">
+        <div class="toolbar">
+          <menu-icon />
+        </div>
         <codemirror v-model="code" :options="editorOptions"
           @ready="onEditorReady"
           @focus="onEditorFocus"
@@ -23,4 +26,5 @@ export default comp
 
 <style lang="sass">
 @import '../assets/styles/codemirror.sass'
+@import '../assets/styles/toolbar.sass'
 </style>

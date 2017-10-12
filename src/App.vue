@@ -6,6 +6,7 @@
 
 <script>
 import MainEditor from './components/MainEditor'
+import 'vue-material-design-icons/styles.css'
 require('@/assets/styles/main.sass')
 
 export default {
