@@ -6,14 +6,19 @@
 
     <div class="editor_wrap">
       <div class="markdown-editor">
+
         <div class="toolbar">
-          <menu-icon />
+          <div class="toolbar_btn">
+            <menu-icon />
+          </div>
         </div>
+
         <codemirror v-model="code" :options="editorOptions"
           @ready="onEditorReady"
           @focus="onEditorFocus"
           @change="onEditorCodeChange"
         ></codemirror>
+
       </div>
     </div>
   </div>
