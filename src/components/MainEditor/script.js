@@ -1,7 +1,9 @@
 import { codemirror } from 'vue-codemirror'
 import themes from './themes'
 import modes from './modes'
-import MenuIcon from 'vue-material-design-icons/menu.vue'
+
+import BoldIcon from 'icons/format-bold'
+import ItalicIcon from 'icons/format-italic'
 
 require('codemirror/mode/gfm/gfm.js')
 
@@ -23,7 +25,8 @@ export default {
   },
 
   components: {
-    MenuIcon,
+    BoldIcon,
+    ItalicIcon,
     codemirror
   },
 

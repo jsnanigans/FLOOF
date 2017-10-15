@@ -8,8 +8,9 @@
       <div class="markdown-editor">
 
         <div class="toolbar">
-          <div class="toolbar_btn">
-            <menu-icon />
+          <div class="toolbar_buttons">
+            <bold-icon class="icon" />
+            <italic-icon class="icon" />
           </div>
         </div>
 

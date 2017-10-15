@@ -1,12 +1,35 @@
 $tb_color: white
-$tb_iconSize: 40px
+$tb_iconSize: 26px
 
 .toolbar
   position: absolute
   top: 0
   left: 0
+  margin: 16px 0 0 5px
+
+  &_buttons
+    word-spacing: 1px
+    letter-spacing: 0
+
+  .icon
+    font-size: $tb_iconSize
+    cursor: pointer
+    border-radius: 4px
+    width: 30px
+    height: 24px
+    padding: 3px 0
+    text-align: center
+    transition: background 120ms
+    margin: 0
+    background: rgba(0,0,0,.2)
+    display: inline-block
+
+    &:hover
+      background: rgba(0,0,0,.2)
+    // background: orange
   
   svg
+    display: inline-block
     fill: $tb_color
-    height: $tb_iconSize
     width: $tb_iconSize
+    height: $tb_iconSize
