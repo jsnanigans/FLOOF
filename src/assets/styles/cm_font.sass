@@ -38,10 +38,19 @@ $hl: #17a6b5
       &-list
         color: transparent
         padding-left: 15px
-        
+
         &-ul
           &::before
             color: $hl
             content: '•'
             position: absolute
             top: 10%
+      
+      &-quote
+        color: rgba($hl, .5)
+        letter-spacing: 0.03em
+        font-weight: normal
+
+        &-1
+          border-left: 2px solid $hl
+          padding-left: 4px
