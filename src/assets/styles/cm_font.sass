@@ -2,10 +2,14 @@
   .cm
     &-header
       font-weight: bold
+      display: inline-block
+      padding: 5px 0
 
       &::before
         position: absolute
-        color: rgba(0,0,0,.5)
+        opacity: 1
+        color: #17a6b5
+        // text-shadow: 0 0 2px 
 
       &-1
         font-size: 2em
@@ -28,8 +32,9 @@
         &::before
           content: '#####'
       &-6
-        font-size: 0.8em
+        font-size: 0.9em
         &::before
+          top: 18%
           content: '######'
 
     &-comment

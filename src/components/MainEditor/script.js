@@ -20,7 +20,7 @@ export default {
       editorOptions: {
         mode: 'gfm',
         lineNumbers: false,
-        theme: 'dracula'
+        theme: 'eclipse'
       }
     }
   },

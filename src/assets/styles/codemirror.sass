@@ -36,12 +36,28 @@ $tb_fs: 14px
       padding: 0 25px
       // padding-bottom: 10px !important
 
+    &-vscrollbar,
+    &-hscrollbar
+      opacity: 0.7
+      cursor: pointer
+      &::-webkit-scrollbar
+        background: #333
+      &::-webkit-scrollbar-thumb
+        background: #000
+        border-left: 2px solid #333
+
+    &-scrollbar
+      &-filler
+        background: #000
+        opacity: 0.8
+
     &-lines
       // margin: 20px 0
 
     // code style fix
     &-code
       // padding-bottom: 20px
+      overflow-wrap: break-word
       margin: 15px 0
       backface-visibility: hidden
       .cm
