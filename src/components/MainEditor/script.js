@@ -5,6 +5,10 @@ import modes from './modes'
 import BoldIcon from 'icons/format-bold'
 import ItalicIcon from 'icons/format-italic'
 
+require('codemirror/addon/edit/continuelist.js')
+require('codemirror/addon/mode/overlay.js')
+require('codemirror/addon/selection/mark-selection.js')
+
 require('codemirror/mode/gfm/gfm.js')
 
 export default {
@@ -18,9 +22,26 @@ export default {
       modes,
       loadedLangs: [],
       editorOptions: {
-        mode: 'gfm',
+        // mode: 'gfm',
+        // lineNumbers: false,
+        // theme: 'eclipse',
+        // highlightFormatting: true
+        // mode: 'gfm',
+        mode: {
+          name: 'gfm',
+          highlightFormatting: true
+        },
+        theme: 'eclipse',
+        tabSize: 2,
+        indentUnit: 2,
+        indentWithTabs: true,
         lineNumbers: false,
-        theme: 'eclipse'
+        autofocus: false,
+        // extraKeys: keyMaps,
+        lineWrapping: true,
+        allowDropFileTypes: ['text/plain'],
+        placeholder: '',
+        styleSelectedText: true
       }
     }
   },
