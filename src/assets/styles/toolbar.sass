@@ -5,13 +5,14 @@ $tb_iconSize: 26px
   position: absolute
   top: 0
   left: 0
-  margin: 16px 0 0 5px
+  margin: 20px 0 0 10px
 
   &_buttons
-    word-spacing: 1px
+    word-spacing: -0.4em
     letter-spacing: 0
 
   .icon
+    position: relative
     font-size: $tb_iconSize
     cursor: pointer
     border-radius: 4px
@@ -21,7 +22,7 @@ $tb_iconSize: 26px
     text-align: center
     transition: background 120ms
     margin: 0
-    background: rgba(0,0,0,.2)
+    // background: rgba(0,0,0,.2)
     display: inline-block
 
     &:hover
@@ -33,3 +34,6 @@ $tb_iconSize: 26px
     fill: $tb_color
     width: $tb_iconSize
     height: $tb_iconSize
+    position: absolute
+    left: 2px
+    top: 3px
