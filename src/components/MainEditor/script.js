@@ -12,6 +12,7 @@ export default {
   data () {
     return {
       code: '',
+      saveCodeTimeout: false,
       activeTheme: 'dracula',
       themes,
       modes,
@@ -35,16 +36,29 @@ export default {
       this.$editor = editor
     },
     onEditorFocus () {},
-    onEditorCodeChange () {}
+    onEditorCodeChange () {},
+
+    saveCode () {
+      clearTimeout(this.saveCodeTimeout)
+      this.saveCodeTimeout = setTimeout(_ => {
+        localStorage.code = this.code
+      }, 100)
+    }
   },
 
   mounted () {
+    if (localStorage.code) {
+      this.code = localStorage.code
+    }
   },
 
   watch: {
     activeTheme (newTheme) {
       console.log(this.$editor)
       this.$editor.setOption('theme', newTheme)
+    },
+    code (newCode) {
+      this.saveCode()
     }
   }
 }
