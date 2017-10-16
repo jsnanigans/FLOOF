@@ -32,5 +32,6 @@ export default comp
 
 <style lang="sass">
 @import '../assets/styles/codemirror.sass'
+@import '../assets/styles/cm_font.sass'
 @import '../assets/styles/toolbar.sass'
 </style>

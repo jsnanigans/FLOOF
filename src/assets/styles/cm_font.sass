@@ -1,0 +1,37 @@
+.CodeMirror-code
+  .cm
+    &-header
+      font-weight: bold
+
+      &::before
+        position: absolute
+        color: rgba(0,0,0,.5)
+
+      &-1
+        font-size: 2em
+        &::before
+          content: '#'
+      &-2
+        font-size: 1.6em
+        &::before
+          content: '##'
+      &-3
+        font-size: 1.4em
+        &::before
+          content: '###'
+      &-4
+        font-size: 1.2em
+        &::before
+          content: '####'
+      &-5
+        font-size: 1em
+        &::before
+          content: '#####'
+      &-6
+        font-size: 0.8em
+        &::before
+          content: '######'
+
+    &-comment
+      padding: 5px 0
+      display: inline-block
