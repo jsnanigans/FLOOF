@@ -37,7 +37,7 @@ export default {
         indentWithTabs: true,
         lineNumbers: false,
         autofocus: false,
-        // extraKeys: keyMaps,
+        extraKeys: {'Enter': 'newlineAndIndentContinueMarkdownList'},
         lineWrapping: true,
         allowDropFileTypes: ['text/plain'],
         placeholder: '',
