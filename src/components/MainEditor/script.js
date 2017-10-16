@@ -31,7 +31,7 @@ export default {
           name: 'gfm',
           highlightFormatting: true
         },
-        theme: 'eclipse',
+        theme: 'material',
         tabSize: 2,
         indentUnit: 2,
         indentWithTabs: true,

@@ -1,52 +1,47 @@
 $hl: #17a6b5
+
 .CodeMirror-code
   .cm
-    // &-header
-    //   font-weight: bold
-    //   display: inline-block
-    //   padding: 5px 0
+    &-header
+      font-weight: bold
+      display: inline-block
+      padding: 2px 0
 
-    //   &::before
-    //     position: absolute
-    //     opacity: 1
-    //     color: $hl
-    //     // text-shadow: 0 0 2px 
+      &::before
+        position: absolute
+        opacity: 1
+        color: $hl
+        // text-shadow: 0 0 2px 
 
-    //   &-1
-    //     font-size: 2em
-    //     &::before
-    //       content: '#'
-    //   &-2
-    //     font-size: 1.6em
-    //     &::before
-    //       content: '##'
-    //   &-3
-    //     font-size: 1.4em
-    //     &::before
-    //       content: '###'
-    //   &-4
-    //     font-size: 1.2em
-    //     &::before
-    //       content: '####'
-    //   &-5
-    //     font-size: 1em
-    //     &::before
-    //       content: '#####'
-    //   &-6
-    //     font-size: 0.9em
-    //     &::before
-    //       top: 18%
-    //       content: '######'
+      &-1
+        font-size: 2.2em
+      &-2
+        font-size: 1.8em
+      &-3
+        font-size: 1.5em
+      &-4
+        font-size: 1.3em
+      &-5
+        font-size: 1.1em
+      &-6
+        font-size: 0.9em
 
-    // &-commen
-    //   padding: 0
-    //   display: inline-block
+    &-formatting
+      &-code-block
+        padding: 9px 0 4px
+        display: inline-block
 
-    // &-quote
-    //   font-style: italic
-    //   background: rgba(0,0,0,.1)
-    //   padding: 0 4px 0 1px
-    //   &::before
-    //     content: '>'
-    //     position: absolute
-    //     color: $hl
+      &-header
+        color: $hl
+        opacity: 0.7
+
+      &-list
+        color: transparent
+        padding-left: 15px
+        
+        &-ul
+          &::before
+            color: $hl
+            content: '•'
+            position: absolute
+            top: 10%
