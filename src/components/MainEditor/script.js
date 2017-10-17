@@ -12,8 +12,6 @@ require('codemirror/addon/mode/overlay.js')
 require('codemirror/addon/selection/mark-selection.js')
 require('codemirror/addon/selection/active-line.js')
 
-require('codemirror/mode/gfm/gfm.js')
-
 export default {
   name: 'MainEditor',
   data () {
@@ -26,7 +24,7 @@ export default {
       loadedLangs: [],
       editorOptions: {
         mode: {
-          name: 'markdown',
+          name: 'gfm',
           highlightFormatting: true
         },
         theme: 'material',
