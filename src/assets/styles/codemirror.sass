@@ -36,15 +36,15 @@ $tb_fs: 14px
       // padding-top: 20px
     
     &-sizer
-      padding: 0 25px
+      padding: 0 0
       // padding-bottom: 10px !important
 
     &-vscrollbar,
     &-hscrollbar
-      opacity: 0.7
+      // opacity: 0.7
       cursor: pointer
       &::-webkit-scrollbar
-        background: #333
+        background: transparent
       &::-webkit-scrollbar-thumb
         background: #000
         border-left: 2px solid #333
@@ -53,6 +53,12 @@ $tb_fs: 14px
       &-filler
         background: #000
         opacity: 0.8
+
+    &-activeline
+      background: rgba(0,0,0,.08)
+    
+    &-line
+      padding: 0 20px
 
     &-lines
       // margin: 20px 0

@@ -9,8 +9,8 @@
 
         <div class="toolbar">
           <div class="toolbar_buttons">
-            <bold-icon class="icon" />
-            <italic-icon class="icon" />
+            <bold-icon class="icon" @click.native="toolbar('bold')" />
+            <italic-icon class="icon" @click.native="toolbar('italic')" />
           </div>
         </div>
 

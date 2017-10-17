@@ -5,9 +5,12 @@ import modes from './modes'
 import BoldIcon from 'icons/format-bold'
 import ItalicIcon from 'icons/format-italic'
 
+import tm from './textmutations'
+
 require('codemirror/addon/edit/continuelist.js')
 require('codemirror/addon/mode/overlay.js')
 require('codemirror/addon/selection/mark-selection.js')
+require('codemirror/addon/selection/active-line.js')
 
 require('codemirror/mode/gfm/gfm.js')
 
@@ -22,13 +25,8 @@ export default {
       modes,
       loadedLangs: [],
       editorOptions: {
-        // mode: 'gfm',
-        // lineNumbers: false,
-        // theme: 'eclipse',
-        // highlightFormatting: true
-        // mode: 'gfm',
         mode: {
-          name: 'gfm',
+          name: 'markdown',
           highlightFormatting: true
         },
         theme: 'material',
@@ -41,7 +39,8 @@ export default {
         lineWrapping: true,
         allowDropFileTypes: ['text/plain'],
         placeholder: '',
-        styleSelectedText: true
+        styleSelectedText: true,
+        styleActiveLine: true
       }
     }
   },
@@ -55,6 +54,7 @@ export default {
   methods: {
     onEditorReady (editor) {
       this.$editor = editor
+      tm.setup(editor)
     },
     onEditorFocus () {},
     onEditorCodeChange () {},
@@ -64,6 +64,10 @@ export default {
       this.saveCodeTimeout = setTimeout(_ => {
         localStorage.code = this.code
       }, 100)
+    },
+
+    toolbar (type) {
+      tm.toolbar(type)
     }
   },
 
@@ -75,7 +79,6 @@ export default {
 
   watch: {
     activeTheme (newTheme) {
-      console.log(this.$editor)
       this.$editor.setOption('theme', newTheme)
     },
     code (newCode) {
